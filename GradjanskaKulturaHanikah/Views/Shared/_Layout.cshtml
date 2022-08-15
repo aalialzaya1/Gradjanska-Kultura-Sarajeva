@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Građanska Kultura Sarajeva</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark py-5" style="background-color: #006EB3;">
+        <div class="container-fluid">
+            <ul class="navbar-nav" style="position: absolute; left: 50%; transform: translateX(-50%);">
+                <li class="nav-item">
+                    <a class="nav-link" style="color:white" asp-area="" asp-controller="Home" asp-action="OsnovneInfo" target="_blank" rel="noopener noreferrer">
+                    <h1 style="text-align:center"><b>GRAĐANSKA KULTURA SARAJEVA</b></h1></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Eng" asp-action="EngIndex">
+                    <h5>eng</h5></a>
+                </li>
+            </ul>
+        </div>
+</nav>
+    </header>
+    <div style="margin-right:0px; margin-top:2%;">
+        @RenderBody()
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div>
+            &copy; 2022 - Građanska Kultura Sarajeva
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
